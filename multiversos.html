@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiversos de Crónicas de Skeleton y Calavera</title>
+  <style>
+    /* 🔹 Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Encabezado */
+    header {
+      background-color: #36006d;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 3px solid #9000ff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    /* 🔹 Menú de navegación */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #36006d;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      gap: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      position: relative;
+      transition: color 0.3s;
+      padding: 6px 10px;
+    }
+
+    nav a:hover {
+      color: #4cc9f0;
+    }
+
+    nav a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #4cc9f0;
+      transition: width 0.3s;
+    }
+
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    /* 🔹 Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #36006d;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-align: left;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #4cc9f0;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* 🔹 Contenido principal */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .personaje {
+      background: #fff;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-left: 5px solid #36006d;
+    }
+
+    .personaje h2 {
+      color: #e63946;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .personaje p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .personaje img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+
+    /* 🔹 Footer */
+    footer {
+      background-color: #36006d;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 3px solid #9000ff;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #4cc9f0;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 🔹 Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .personaje {
+        padding: 15px;
+      }
+
+      .personaje h2 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Crónicas de Skeleton y Calavera</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="personajes.html">Personajes</a>
+    <a href="multiversos.html">Multiversos</a>
+
+    <!-- 🔹 Submenú de Diseños -->
+    <div class="dropdown">
+      <a href="disenos.html">Diseños</a>
+      <div class="dropdown-content">
+        <a href="disenos.html">Diseños Alpha</a>
+        <a href="disenosbeta.html">Diseños Beta</a>
+      </div>
+    </div>
+
+    <a href="animaciones.html">Animaciones</a>
+    <a href="comics.html">Cómics</a>
+  </nav>
+
+  <main>
+    <section class="personaje">
+      <h2>Universo Original</h2>
+      <p>
+        Este universo nunca se tuvo la oportunidad de escribirse por lo cúal no se tiene una historia 100% fiel a este universo, y las versiones que hagan referencia a este no serán el Original completamente. Solo hay 3 versiones del universo original (Z: la version original que jamas se escribió, Zero: la que esta escrita en una libreta y One: la que esta escrita en digital).
+      </p>
+    </section>
+  </main><main>
+
+    <section class="personaje">
+      <h2>Eclipsus</h2>
+      <p>
+        Este universo vemos por primera vez a Damian, el hijo de skeleton y a Skull II, hijo de Skull prime, donde todos los personajes principales estan desaparecidos y sus unicos conocidos son 4 demonios cristalinos y un prtsonaje muy misterioso.
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Golden Shadow</h2>
+      <p>
+        Este universo los personajes principales estaban acompañados de un gran grupo de personajes que tambien tienen poderes pero no todos son amistosos, ya que hay un ser llamado Golden Shadow que junto a sus seguidores querran ser los gobernantes.
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Eclipsus 2</h2>
+      <p>
+        Este universo al igual que en Eclipsus 1, estan Damian y Skull pero en este , Skull no trabaja con Eclipsus y todos tienen que peleear contra este poderoso ser pero, no contaban que un misterioso ser de otro universo llegaria.
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Eclipsus 3</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>God Falcón, Purple Calavera, Revenge Alexander</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Crazy Falcon</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Glitch Falcon</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Supreme Skeleton vs Thunder King Spectre</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Scarlett King 1 | Ghost Falcon vs Flame Golden</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Scarlett King | Nuevo Universo</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Dark Demon Alternativo</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Damián y Dark Demon Alternativo</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Damian y Damian Dark</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Dark Void</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Alt Uni Eclipsus 3 | Dark Void pt.2</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Light Skeleton</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Galaxier | Alternativo de Light Skeleton</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Alexander 049</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Purple Calavera</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Eclipsus 4 | Scarlett King y Calavera absorbidos</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Crónicas Descendientes | Crónicas de Benjamín y Damián</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Reverse | Principado y Dark-ángel</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Calavera III | Serio</h2>
+      <p>
+        
+      </p>
+    </section>
+
+    <section class="personaje">
+      <h2>Calaverra III | Super Serio</h2>
+      <p>
+        
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Crónicas de Skeleton y Calavera | Todos los derechos reservados</p>
+    <p>
+      <a href="https://chat.whatsapp.com/EtVvuzO16MBo2XrE5TCU?mode=ems_copy_h_t">WhatsApp Group</a> |
+      <a href="https://whatsapp.com/channel/0029VahXftFAInPsYO4JI601">WhatsApp Channel</a> |
+      <a href="https://www.facebook.com/share/g/17W9DnHKzi/">Facebook Group</a>
+    </p>
+  </footer>
+</body>
+</html>
