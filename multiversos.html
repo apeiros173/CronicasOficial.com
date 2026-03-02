@@ -6,20 +6,9 @@
   <title>Multiversos de Crónicas de Skeleton y Calavera</title>
   <style>
     /* 🔹 Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f5f5f5; color: #333; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
 
-    body {
-      background: #f5f5f5;
-      color: #333;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    /* 🔹 Encabezado */
     header {
       background-color: #36006d;
       color: #fff;
@@ -28,15 +17,8 @@
       border-bottom: 3px solid #9000ff;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-    }
+    header h1 { margin: 0; font-size: 2.5em; font-weight: 800; text-transform: uppercase; letter-spacing: -1px; }
 
-    /* 🔹 Menú de navegación */
     nav {
       display: flex;
       justify-content: center;
@@ -47,20 +29,11 @@
     }
 
     nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9em;
-      position: relative;
-      transition: color 0.3s;
-      padding: 6px 10px;
+      color: #fff; text-decoration: none; font-weight: bold;
+      text-transform: uppercase; font-size: 0.9em; position: relative; transition: color 0.3s; padding: 6px 10px;
     }
 
-    nav a:hover {
-      color: #4cc9f0;
-    }
-
+    nav a:hover { color: #4cc9f0; }
     nav a:after {
       content: '';
       position: absolute;
@@ -71,54 +44,18 @@
       background-color: #4cc9f0;
       transition: width 0.3s;
     }
+    nav a:hover:after { width: 100%; }
 
-    nav a:hover:after {
-      width: 100%;
-    }
-
-    /* 🔹 Dropdown */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
+    .dropdown { position: relative; display: inline-block; }
     .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #36006d;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-      top: 100%;
-      left: 0;
-      border-radius: 4px;
+      display: none; position: absolute; background-color: #36006d;
+      min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; top: 100%; left: 0; border-radius: 4px;
     }
+    .dropdown-content a { display: block; padding: 10px; color: #fff; text-align: left; text-decoration: none; font-size: 0.9em; }
+    .dropdown-content a:hover { background-color: #4cc9f0; color: #000; }
+    .dropdown:hover .dropdown-content { display: block; }
 
-    .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: #fff;
-      text-align: left;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #4cc9f0;
-      color: #000;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* 🔹 Contenido principal */
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
+    main { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
     .personaje {
       background: #fff;
       margin: 30px auto;
@@ -127,28 +64,10 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       border-left: 5px solid #36006d;
     }
+    .personaje h2 { color: #e63946; font-size: 1.8em; margin-bottom: 15px; font-weight: 800; text-transform: uppercase; }
+    .personaje p { font-size: 1.1em; margin-bottom: 15px; }
+    .personaje img { max-width: 100%; border-radius: 8px; margin-top: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); }
 
-    .personaje h2 {
-      color: #e63946;
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    .personaje p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
-    }
-
-    .personaje img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    }
-
-    /* 🔹 Footer */
     footer {
       background-color: #36006d;
       color: #fff;
@@ -156,39 +75,15 @@
       text-align: center;
       border-top: 3px solid #9000ff;
     }
+    footer p { margin-bottom: 10px; }
+    footer a { color: #4cc9f0; margin: 0 10px; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-    footer p {
-      margin-bottom: 10px;
-    }
-
-    footer a {
-      color: #4cc9f0;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* 🔹 Responsive */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .personaje {
-        padding: 15px;
-      }
-
-      .personaje h2 {
-        font-size: 1.4em;
-      }
+      header h1 { font-size: 1.8em; }
+      nav { flex-wrap: wrap; gap: 10px; }
+      .personaje { padding: 15px; }
+      .personaje h2 { font-size: 1.4em; }
     }
   </style>
 </head>
@@ -201,8 +96,6 @@
     <a href="index.html">Inicio</a>
     <a href="personajes.html">Personajes</a>
     <a href="multiversos.html">Multiversos</a>
-
-    <!-- 🔹 Submenú de Diseños -->
     <div class="dropdown">
       <a href="disenos.html">Diseños</a>
       <div class="dropdown-content">
@@ -210,186 +103,219 @@
         <a href="disenosbeta.html">Diseños Beta</a>
       </div>
     </div>
-
     <a href="animaciones.html">Animaciones</a>
     <a href="comics.html">Cómics</a>
   </nav>
 
   <main>
     <section class="personaje">
-      <h2>Universo Original</h2>
-      <p>
-        Este universo nunca se tuvo la oportunidad de escribirse por lo cúal no se tiene una historia 100% fiel a este universo, y las versiones que hagan referencia a este no serán el Original completamente. Solo hay 3 versiones del universo original (Z: la version original que jamas se escribió, Zero: la que esta escrita en una libreta y One: la que esta escrita en digital).
-      </p>
-    </section>
-  </main><main>
-
-    <section class="personaje">
-      <h2>Eclipsus</h2>
-      <p>
-        Este universo vemos por primera vez a Damian, el hijo de skeleton y a Skull II, hijo de Skull prime, donde todos los personajes principales estan desaparecidos y sus unicos conocidos son 4 demonios cristalinos y un prtsonaje muy misterioso.
-      </p>
+      <h2>1. Universo Original</h2>
+      <p>Este universo nunca se tuvo la oportunidad de escribirse por lo cúal no se tiene una historia 100% fiel a este universo, y las versiones que hagan referencia a este no serán el Original completamente. Solo hay 3 versiones del universo original (Z o la Prime: la version original que jamas se escribió, Zero: la que esta escrita en una libreta y One: la que esta escrita en digital).</p>
     </section>
 
     <section class="personaje">
-      <h2>Golden Shadow</h2>
-      <p>
-        Este universo los personajes principales estaban acompañados de un gran grupo de personajes que tambien tienen poderes pero no todos son amistosos, ya que hay un ser llamado Golden Shadow que junto a sus seguidores querran ser los gobernantes.
-      </p>
+      <h2>2. Eclipsus 1 | Calavera II trabajando para Eclipsus</h2>
+      <p>(en este punto todos los acontecimientos del episodio una temporada uno hasta el episodio 6 de la temporada 3 pasan igual, pero cambian desde aquí)
+Damián: Yo y calavera segundo siempre discutíamos , pues yo trataba de traer de vuelta a mi padre, y el, el no sabía que Eclipsus fue quien mató a nuestros padres, y Eclipsus no se atrevía a enfrentarnos el sólo, así que engaño a calavera segundo siendo muy ingenuo que lo ayudó, Eclipsus le dijo a calavera segundo que me detuviera, así que el lo hizo, calavera segundo empezó a pelear contra mi , pero yo era más fuerte que el, el jamás me derrotaría, pero Eclipsus me emboscó y me dio una patada tan fuerte en la cabeza que mi cuello se rompió y me desmayé.
+Eclipsus: bien hecho secuas, ahora podré gobernar la oscuridad sin que nadie me detenga.
+Y Eclipsus trato de absorberme, pero calavera segundo no lo dejaría hacerlo.
+Calavera segundo: [monólogo interior] perdóname primo por haberte traicionado, yo hice que te derrotaran, y no dejaré que te absorban.
+Así que calavera segundo empezó a pelear contra Eclipsus, yo desperté y los vi pelear, obviamente fui a pelear contra Eclipsus, y nos repartíamos golpes, pero Eclipsus no parecía ser más fuerte que nosotros dos unidos, así que pude acercarme lo suficiente a él para arrancarle el corazón y su esencia, y lo habíamos derrotado, pero aún no sabíamos cómo salir de este lugar.
+Y luego, de la mano de Damián salieron calavera y sus amigos
+(y pasaron los eventos de la temporada 3 episodio 19 pero sin los demonios cristalinos).
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Eclipsus 2</h2>
-      <p>
-        Este universo al igual que en Eclipsus 1, estan Damian y Skull pero en este , Skull no trabaja con Eclipsus y todos tienen que peleear contra este poderoso ser pero, no contaban que un misterioso ser de otro universo llegaria.
-      </p>
+      <h2>3. Golden Shadow</h2>
+      <p>(en este punto todos los acontecimientos del episodio una temporada uno hasta el episodio 6 de la temporada 3 pasan igual, pero cambian desde aquí)
+Skeleton: no sé qué pasó, primero vi un destello, y de repente, un grupo de personas, estos tenían poderes pero no estaban los elementales, pero si calavera, Damián, calavera segundo y unos demonios cristalinos, pero había un demonio más peligroso, Golden Shadow, este empezó a absorber muchas personas, y cada vez se hacía más poderoso, tuvimos que intervenir, pero para liberar a los que absorbió, tenía que usar el golpe fantasma las veces que absorbió a una persona, y los absorbidos fueron liberados y , los seguidores se retiraron a un mundo espejo, días después de eso, solo empezamos a entrenar Aqua y calavera contra mí , ambos se sincronizaron para darme un golpe tan potente que me mandaron a un vacío sin querer, pero yo concentre todo mi poder y se abrió un portal, mientras tanto Aqua y calavera vieron cómo se creó un agujero negro donde antes estaba yo, pero empezaron a huir porqué este creció rápidamente, pero cuando ya la mayor parte del mundo estaba cubierto por el agujero, solo dejo de crecer y explotó y se deshizo el agujero negro sin afectar al mundo, y me libere, era libre y dejamos de entrenar ese día, y pasaron días y días y…nunca logramos salir de allí.
+Y ningún personaje logro escapar en este universo, todos murieron, pero con compañía y Damián fue olvidando a su madre y amigos, al igual que calavera, Falcon y Skeleton a sus seres queridos. Lo seguidores de Golden Shadow en la tierra al fin lograron su cometido, deshacerse de Skeleton y con calavera de paso.
+Golden Shadow desencadeno que dark bones no reviviera a calavera, blood reaper no haga pagar nadie, el grupo de seguidores se disuelva y la OMCEA no se creara, muchas cosas que hubieran pasado, lamentablemente los demás en el mundo real, "Evelyn" nunca supo que su hijo se volvió hombre, ni que Skeleton trato de salvar a su hijo y salir , pero nunca pudieron, el mundo real los olvido a ellos también, pero Evelyn nunca olvido ni cuando estuvo a punto de morir. Evelyn solo contaba su crónica con el demonio del cabello rojo, la historia de amor que tuvo y del hijo que perdió, pero muchos no creían la parte de los demonios porqué nunca supieron que Ethan y Damián fueron demonios. Skeleton murió tratando de recordar la cara de Evelyn una última vez, murió sabiendo que intento salir de ahí para verla de nuevo, pero Damián acepto la realidad, y milenios después también murió.
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Eclipsus 3</h2>
-      <p>
-        
-      </p>
+      <h2>4. Eclipsus 2 | Scarlett King Interfiere</h2>
+      <p>(En este universo, aun no aparecen los demonios cristalinos, pero…)
+Damián: después del resplandor, trataba de salir, trate de romper el hechizo de las gemas forzando a calavera segundo a usar su poder, pero eso alimento a las gemas y liberaron a Eclipsus, así que cuando lo vi, aplique el golpe fantasma en él, sacando parte de su esencia y de mii mano salió solo mi tío Spectre, calavera y yo estábamos peleando contra Eclipsus pero llego algo que era de otro lugar, era una figura humanoide roja, con cuernos , son ojos pero una gran sonrisa, tenia una corona de fuego entre sus cuernos, y con sus propias manos, hizo una “X’ en el cielo que se dirigió hacia Eclipsus, y esa criatura mató a Eclipsus destruyendo su cuerpo y cruzo una grieta, y después de eso nada paso.</p>
     </section>
 
     <section class="personaje">
-      <h2>God Falcón, Purple Calavera, Revenge Alexander</h2>
-      <p>
-        
-      </p>
+      <h2>5. Eclipsus 3 | Muerte Skeleton Congelado</h2>
+      <p>(En este universo después de derrotar a Eclipsus, no pasan pocos días en los que Skeleton quiere ganar poder en ese mundo)
+Damián: después que me absorbió Eclipsus, calavera segundo vio la clase de monstruo que era Eclipsus, Eclipsus seria poderoso e imparable si llegaba a absorber a los demonios cristalinos y a Falcon, pero calavera segundo se revelo contra él, Eclipsus era más fuerte y lo volvió polvo, y empezó a absorber a scarlet, a jade y a citrino, calavera segundo se regenero y combino poderes con Winter, ahora calavera segundo como ice calavera y Winter como dark Winter empezaron a pelear contra Eclipsus, congelaron el cuerpo de Eclipsus y este explotó, todos los que había absorbido salieron, pero no salieron mi padre ni los elementales hasta días después, pero mi padre quiso gobernar sobre todos en ese mundo, tratamos de detenerlo pero era muy fuerte, calavera segundo y Winter se transformaron de nuevo en sus versiones heladas y oscuras y dark Winter tenía que poner su mano en su piel 5 segundos para congelarlo, lo consiguió pero mi padre le atravesó el corazón, mi padre era ahora hielo, el hielo se empezó a comprimir y exploto, quedando solo trozos de hielo en el suelo y Winter solo quedo vulnerable, regenero su corazón como si fuese nieve per estaba débil.
+
+(Luego aparece light Skeleton volando en el cielo, que abre una grieta y se va al universo de alexander 49).
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Crazy Falcon</h2>
-      <p>
-        
-      </p>
+      <h2>6. Purple Calavera, Revenge Alexander, Aqhuathulu</h2>
+      <p>(pasan los mismos eventos de la temporada 1 hasta la mitad del episodio 6)
+Spectre: antes que yo apareciera, Skeleton salió de la dimensión donde estaba encarcelado y empezó a matar a los pocos humanos que quedaban. Mató a wave, Stone, Frost , mientras controlaba el cuerpo de alexander, alexander había abierto la boca sobre el demonio en su interior y este le cumplió sus amenazas, calavera, Aqua y blaze trataban de detener a Skeleton pero no podían, Skeleton golpeo a Aqua que lo hizo caer al suelo pero blaze lo atrapo,  calavera quiso contratacar pero no pudo, Skeleton destruyo sus huesos y convirtió en polvo, pero mi padre dark bones le dio mas poder y resucito calavera como Purple calavera, ahora Skeleton y Purple estaban peleando como dioses, pero el poder de Purple no era suficiente, Skeleton quería mandar a Purple al inframundo, así que abrió una grieta al inframundo pero calavera Purple termino mandándolo a él allí, pero Skeleton salió rápido del inframundo, Purple le daba batalla pero Skeleton poco a poco lo superaba, blaze quiso ayudar pero Skeleton lo hirió, pero Purple calavera dio de su poder a el y a Aqua, transformándolos en infernal blaze y aquathulhu, un Aqua más grande con tentáculos casi parecido a mi [Spectre]), y juntos atacaron a Skeleton y aquathulhu lo agarro con sus tentáculos, calavera estaba haciendo un hechizo para romper sus huesos y matarlo, blaze sujeto a Skeleton para que no se liberará, y murió, Aqua lo soltó y Skeleton cayo muerto, pero , ese era el cuerpo de alexander, así que el alma y cuerpo de Skeleton fue al infierno porqué murió, pero en el cuerpo de alguien más, y alexander, murió en su cuerpo por lo que su alma bajo al inframundo solamente. Skeleton no quiso regresar porqué lo derrotaron, así que tenia que ser mas fuerte para acabar con ellos, pero alguien encontró a alexander en el inframundo y le prometió venganza, poder, y Alexander ahora tenía rencor hacia Skeleton por lo que acepto, calavera bajo al inframundo y pidió las lamas de sus amigos muertos por Skeleton, dark bones les dio las almas de wave, Stone, Frost pero el alma de alexander no la encontró, y pronto surgiría yo, que aun no sabia lo sucedido, y ahora ya estaban vivos los amigos de calavera, todos , excepto Alexander.
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Glitch Falcon</h2>
-      <p>
-        
-      </p>
+      <h2>7. Crazy Falcon</h2>
+      <p>[Sin datos]</p>
     </section>
 
     <section class="personaje">
-      <h2>Supreme Skeleton vs Thunder King Spectre</h2>
-      <p>
-        
-      </p>
+      <h2>8. Glitch Falcon</h2>
+      <p>[Sin Datos]</p>
     </section>
 
     <section class="personaje">
-      <h2>Scarlett King 1 | Ghost Falcon vs Flame Golden</h2>
-      <p>
-        
-      </p>
+      <h2>9. Supreme Skeleton vs Thunder King Spectre</h2>
+      <p>Spectre: durante un tiempo Skeleton con poder supremo derrotado a todos los guerreros, incluso a mí, y encerró a calavera en el inframundo por mil años, mientras aún no se cumplía ese tiempo, algunos se negaban a obedecer a Skeleton pero tenían que hacerlo si no querían morir, pero fueron formando una rebelión que Skeleton no espero, Skeleton se transformó en Skeleton supreme y atacó a todos pero aunque éramos menos de 10 , el no pudo ganar, yo lo atacaba con múltiples rayos, mis ojos se volvieron blancos , era un dios del trueno, que destruyó el cráneo de Skeleton, aunque se regenero, quedo débil , y lo encerramos en una habitación anti poderes el cual no podía salir, y me coronaron como el rey espectro. Y fui al inframundo y liberé a calavera de su condena. Pero Skeleton no estaría contenido mucho tiempo.</p>
     </section>
 
     <section class="personaje">
-      <h2>Scarlett King | Nuevo Universo</h2>
-      <p>
-        
-      </p>
+      <h2>10. Scarlett King 1 | Ghost Falcon & Flame Golden</h2>
+      <p>Skeleton: jamás creí que unos insectos (los elementales, mi hijo y hermano Spectre) y calavera podrían acabarme, pero, traté de vengarme de nuevo, me aparecí ante scarlet, pero le di demasiado que el mismo me mató. Pero no sería mi única opción, ahora en espíritu manipule a Falcon para que tuviera mi poder y atacara a Scarlet que se autoproclamo como Scarlet King con mi poder, pero, Golden Shadow estaba manipulando a Blaze, Falcon se transformó en Ghost Falcon, con alas de huesos, y Blaze en Flame Golden, curiosamente trabajaron juntos porqué el objetivo era el mismo, matara a scarlet, pero scarlet King huyo llevándose a sus súbditos a un mircouniverso creado por el y este mundo se quedó vacío solo con Flame Golden y Ghost Falcon. Pero Golden Shadow sembraría maldad en la mente de blaze, lo corrompería sin que blaze se diera cuenta, ya no pensaba bien que intentaría atacar a Ghost Falcon, pero no lo hizo a ver una figura surcando los cielos. Era God Falcon que entró a ese universo buscando a Dark Skeleton y se fue a otro universo desconocido, y luego apareció Light Skeleton que viajo directo al universo “Eclipsus 3”.
+(¿parte 6 de eventos de Galaxier two?)
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Dark Demon Alternativo</h2>
-      <p>
-        
-      </p>
+      <h2>11. Scarlett King | Nuevo Universo</h2>
+      <p>Alexander: después que el hijo de ese maldito demonio nos librara de Eclipsus, Skeleton hizo un trato con scarlet para gobernar el mundo, pero no le funciono, vaya sorpresa jajaja >:), aunque scarlet King nos trajo a este universo (micro verso) aun así creí que Skeleton regresaría así que le pediría algo de poder a scarlet King. Este había llegado de otro universo y al parecer encontró a un ¿Eclipsus bueno que apareció de la nada?
+Scarlet King: ¿para que necesitas poder?
+Alexander: para ayudarte si regresa Skeleton, entonces, ¿me das de tu poder?
+Scarlet King: NO, no me interesa ayudarte, ambos sabemos que no es para eso.
+Alexander: bueno, tendré que pedir ayuda a otro scarlet King
+Scarlet King: ¿otro scarlet King?, SOLO PUEDE HABER UN SCARLET KING Y LO ESTAS VIENDO. Está bien, te ayudaré
+Alexander; ¿espera, porqué cambiaste de opinión?
+Scarlet King: no te lo puedo decir – y scarlet le dio poder a Alexander, - y entonces, ¿dime donde se encuentran los otros scarlet King?
+Alexander: si, en si son de color rojo, otro azul y otro morado, pero son tus otros yo, solo déjame tener la habilidad de viajar entre universos y yo mismo te llevaré, - así alexander convenció a scarlet King y este le dio poder multiversal del viaje.
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Damián y Dark Demon Alternativo</h2>
-      <p>
-        
-      </p>
+      <h2>12. Dark Demon Alternativo</h2>
+      <p>[Sin Datos]</p>
     </section>
 
     <section class="personaje">
-      <h2>Damian y Damian Dark</h2>
-      <p>
-        
-      </p>
+      <h2>13. Damián y Dark Demon Alternativo</h2>
+      <p>[Sin Datos]</p>
     </section>
 
     <section class="personaje">
-      <h2>Dark Void</h2>
-      <p>
-        
-      </p>
+      <h2>14. Damian y Damian Dark</h2>
+      <p>[Sin Datos]</p>
     </section>
 
     <section class="personaje">
-      <h2>Alt Uni Eclipsus 3 | Dark Void pt.2</h2>
-      <p>
-        
-      </p>
+      <h2>15. Dark Skeleton alternativo de Eclipsus 3 | Eclipsus 3-A</h2>
+      <p>RedSkeleton(Damián): después de que mis amigos derrotaran a Eclipsus, mi padre trato de conquistar el mundo de nuevo, así que mis amigos trataron de detenerlo  peo no pudieron, solo Winter puedo debilitarlo y derrotarlo aunque sufrió una herida, pero cuando el cuerpo de hielo de mi padre explotó, pero mi padre ahora tenía piel negra y huesos negros con humo negro rodeándolo, ahora sí, nadie podía detenerlo ni siquiera mi primo calavera segundo que estaba transformado en Sea calavera con poder de Aqua, pero Falcon se transformó el God Falcon y pudo estar al nivel de dark Skeleton , y con su mano toco a mi padre y el poder dark se separo como humo dejando el cuerpo de mi padre, y ese humo se transformo en una grieta negra, mi padre al ver esto, golpeo a God Falcon tan fuerte que lo destransformó temporalmente y entró a esa grieta. Falcon se volvió a transformar en God Falcon y creo un portal para seguirlo donde fuera que este.
+<evento dark Skeleton pt.1>
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Light Skeleton</h2>
-      <p>
-        
-      </p>
+      <h2>16. Alt Uni Eclipsus 3 | Dark Skeleton pt.2 | Eclipsus 3-B</h2>
+      <p><eventos de pt.2>
+Redsk(Damián): después que vencieran a mi padre congelándolo , el cielo empezó a tornarse negro parpadeante, todo se puso oscuro(soundtrack de bonkers) la tierra se tornó negra, las piedras levitaban y temblaba como si se rompiera el mundo, de pronto una grieta negra apareció, empezaron a caer rayos blancos cerca y de allí, salió nadie más que mi padre pero huesos negros y piel negra, eso lo hacía más aterrador porqué sus ojos eran los mismos, pero en vez de sus pupilas negras, no se si eran negras o no tenia pupilas. Calavera segundo quiso atacar, pero mi padre lo esquivó (Redsk no sabe que ese no es su padre de ese universo), quise atacarlo yo, pero me golpeo primero, no sentía dolor y era porqué mi tío calavera se estaba pasando los dolores de todos hacia él.
+
+Calavera segundo le enterró un hueso espina a dark Skeleton, pero este solo lo absorbió su piel, Spectre le lanzo rayos, pero se mantenían en la espalda de dark Skeleton y los rayos se pasaron a sus manos, se convirtieron en un solo rayo ultra potente que lo lanzó a las nubes oscuras del cielo y rayos cayeron en calavera y Spectre. La oscuridad era tanta que dark Skeleton tuvo que lanzar mas rayos y vio a calavera tercero que lo confundió con calavera segundo y lo agarro del cuello y lo lanzó al ver que se equivocó y dark Skeleton lanzo a calavera segundo y tercero contra una montaña.
+Luego God Falcon en el túnel de multiversos buscaba en cada uno a dark Skeleton hasta que lo hayo, y llego God Falcon a este universo. Telepáticamente tenía contenido a dark Skeleton y God Falcon entonces vuelva hacia el suelo y va cayendo directo hacia dark void, pero God se transforma en plumas plateadas que golpearon a dark haciéndolo caer al suelo, pero dark cayó en rodillas, pero fue brutal el golpe que el impacto formo un hueco. God cubrió a dark Skeleton con sus plumas, lo iba a mandar a su universo original y chasqueo los dedos y al quitar las plumas, solo un humo negro, dark Skeleton fue a la dimensión del vacío para que las plumas no le afectarán. Entonces God rebobinó el tiempo y agarro a dark Skeleton para llevárselo al su universo original, pero este se separo con una patada, God Falcon cayó a su universo original, pero sin dark Skeleton mientras que dark Skeleton cayó en otro universo alternativo (Eclipsus 3-D). 
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Galaxier | Alternativo de Light Skeleton</h2>
-      <p>
-        
-      </p>
+      <h2>17. Dark Void | Eclipsus 3-C</h2>
+      <p>Skeleton: después de que mi cuerpo explotara, los restos de hielo tomaron mi forma, mi silueta pero regrese, ahora era un agujero negro , empecé a absorber a los amigos de calavera segundo, y si lograba hacerlos, los traía al vacío donde no escaparían nunca, así que le propuse a calavera segundo un trato, su libertad por la de sus amigos, pero no contaba que el espíritu de Eclipsus los ayudaría, el espíritu de Eclipsus se puso inmedio de la llena entre el vacío y el mundo donde estaban, aunque Eclipsus era un espíritu , exploto su poder el cual libero a los amigos de calavera segundo pero el resucito y cayó al micro universo de scarlet King. Pero mi conciencia vagaría en el vacío, peor saldría pronto.
+(continuación universo Eclipsus 3-d)
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Alexander 049</h2>
-      <p>
-        
-      </p>
+      <h2>18. Retorno de Dark Void | Eclipsus 3-D -> Light Skeleton</h2>
+      <p>Retorno de Dark Void-->Light Skeleton (este universo es el Eclipsus 3-D)
+Mi mente estuvo vagando por el vacío, el oscuro silencioso y solitario vacío, tenía que buscar un modo de regresar, pero estaba algo débil, así que poco a poco fui concentrando mi energía ⛮ e hice una gran esfera de luz blanca con mi poder que ataqué en mí mismo y explotó la luz que e me hizo llegar a este universo, aparecí como un relámpago negro, pero ahora era un ser literalmente de luz, pero física y aparecí frente mi hijo Damián, al parecer aquí aun no lo absorbían.
+(eventos de dark Skeleton parte 3?)
+Y de pronto llego el dark Skeleton original (universo Eclipsus 3-A) y luego God Falcon también, light Skeleton lo vio y le pregunto a God Falcon - ¿vienes por mí?
+God Falcon: no, vengo por dak Skeleton. Y luego llego un calavera segundo de un universo desconocido, pero se hacía llamar dark bones al igual que su bisabuelo, y “dark bones calavera segundo” dijo que venía por Dark Skeleton para matarlo por venganza el cual dark Skeleton no comprendió por qué no lo concia. 
+(dark Skeleton eventos pt.4)
+Light ataco a God atravesándolo, pero God rebobino el tiempo y contrataco antes que light Skeleton a él, dark Skeleton ataco a dark bones calavera segundo, pero dark bones calavera segundo puso oscuridad nocturna y light Skeleton junto con dark Skeleton empezaron a fusionarse, pero consigo tres universos también, los suyos, el de light (Eclipsus 3-C), el de dark Skeleton (Eclipsus 3-A) y este (Eclipsus 3-D). La fusión se hizo, pero God Falcon rebobino para evitar la fusión, pero el tiempo ya no afectaba a la nueva fusionó, la nueva entidad (Galaxier two) pero vio que cuando rebobino, se crearon copias de universo, ahora los universos que se fusionaron eran Eclipsus 3-C-2, Eclipsus 3-A-2, y Eclipsus 3-D-2, incluso ellos ahora habían sido light Skeleton-2 y dark Skeleton-2, pero ahora eran una sola entidad y Galaxier desapareció a un plano mayor. Mientras que en universo Eclipsus-D original(este) light y dark Skeleton atacaron juntos a God Falcon pero el creo un halcón nivel mundial que light esquivó pero el impacto estaba destruyendo esta tierra, y light Skeleton teletransporto a Damián(Eclipsus 3-d) al universo de “alexander 49” y God restauro la tierra, dark bones calavera segundo desapareció pero apareció un greenbones(calavera segundo de otro universo), y fue cuando surgió el Eclipsus de este universo, light Skeleton estaban a punto de luchar cuando greenbones los trajo a una dimensión de bolsillo
+(dark Skeleton eventos pt.5)
+Light Skeleton ataco a Eclipsus a velocidad de la luz, entre sus manos el corazón de Eclipsus y light de una pata destruyó la cabeza de Eclipsus, y ahora tenía que ir a buscar a Damián (Eclipsus 3-d) y viajo por el universo de scarlet King one. Y light al final llego a su universo (Eclipsus 3-c)
+(para quien  no entendió , Galaxier two es la fusión de las variables de light Skeleton y dark Skeleton, al igual que los mundos fueron variables fusionados; light Skeleton-2, dark Skeleton-2, Eclipsus 3-C-2, Eclipsus 3-A-2, y Eclipsus 3-D-2, incluso ahora había un God Falcon-2, mientras que los originales están en sus universos originales , solo los originales ya no se fusionaron , solo las copias)
+< God Falcon-2 sabe que existe galaxier-2 , y está consciente que falló y que ahora es un a fusión de 3 falcones, por lo que su poder se sumó también y es más poderoso que el God Falcon original, pero ahora tendrá que proteger el túnel del multiverso mientras que Galaxier 2 lo administra por fuera, pero ambos acordaron sin hablarse no pelear, porqué crearan más líneas y lo saben. >
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Purple Calavera</h2>
-      <p>
-        
-      </p>
+      <h2>19. Galaxier | Eclipsus-A-2 + Eclipsus-C-2 + Eclipsus-D-2</h2>
+      <p>Fusión de múltiples universos alternativos resultando en Galaxier.</p>
     </section>
 
     <section class="personaje">
-      <h2>Eclipsus 4 | Scarlett King y Calavera absorbidos</h2>
-      <p>
-        
-      </p>
+      <h2>20. Alexander 049</h2>
+      <p>Después del destello, alexander le guardo mucho rencor a Skeleton, así que las gemas las volvió polvo con ayuda de super tecnología, ahora con sus palmas podía robar poderes. así que Alexander se reunió con wave, Frost y Stone , pero alexander atravesó el pecho de cada uno matándolos y quedándose con sus poderes, calavera vio la escena y empezó a pelear contra alexander pero alexander lo hirió, así que calavera supo que no lo vencería sol, por lo que llamo a sus amigos( jade, Aqua, calavera segundo, Spectre, Blaze, citrino , Winter y Falcon, incluso a Skeleton pero este no le dio importancia , pero alexander los iba venciendo uno por uno, haciéndose más poderoso, robo los poderes de ellos excepto los de calavera segundo, calavera revivió y curo a sus amigos teletransportándolos a su casa abandonando el combate. Alexander atacó a Damián, pero calavera segundo lo sano, los que quedaban (calavera y calavera segundo, Spectre, citrino, jade, scarlet y Winter y Damián) atacaron a alexander, pero este contraatacaba y convirtió el ambiente en un bosque con neblina densa.
+
+< pero luego llego el Damián del universo Eclipsus 3-D y light Skeleton lo mando a su universo mientras que light Skeleton vio a alexander 49 y le arranco el corazón destruyéndolo, alexander solo cayó muerto y los demás vieron lo sucedido y light Skeleton se fue a su universo (Eclipsus 3-C)>
+</p>
     </section>
 
     <section class="personaje">
-      <h2>Crónicas Descendientes | Crónicas de Benjamín y Damián</h2>
-      <p>
-        
-      </p>
+      <h2>21. Eclipsus 4 | Scarlett King y Calavera absorbidos</h2>
+      <p>Scarlett King y Calavera son absorbidos, alterando por completo el universo Eclipsus 4.</p>
     </section>
 
     <section class="personaje">
-      <h2>Reverse | Principado y Dark-ángel</h2>
-      <p>
-        
-      </p>
+      <h2>22. Crónicas Descendientes | Crónicas de Benjamín y Damián</h2>
+      <p>Se narran las historias de Benjamín y Damián en los universos descendientes.</p>
     </section>
 
     <section class="personaje">
-      <h2>Calavera III | Serio</h2>
-      <p>
-        
-      </p>
+      <h2>23. Reverse | Principado y Dark-ángel</h2>
+      <p>Universo invertido con el Principado(Skeleton) y el Dark-ángel(calavera) como protagonistas.</p>
     </section>
 
     <section class="personaje">
-      <h2>Calaverra III | Super Serio</h2>
-      <p>
-        
-      </p>
+      <h2>24. Galaxier vs Glitch Falcon Eclipsus 1-A</h2>
+      <p>Estaba God Falcon del universo Eclipsus 3-A mirando los universos en el túnel cuando vio una amenaza, era una versión de el normal, pero glitcheado, Glitch Falcon, que llegó a ese universo (Eclipsus 1-A) y empezó a contagiar a calavera. Galaxier two veía los universos como planetas y vio el mismo suceso y decidió intervenir, Glitch Falcon estaba contagiando a calavera con su Glitch, pero Galaxier two llego y lo detuvo, Glitch Falcon intento glitchear a Galaxier two, per no pudo y Galaxier two viendo a los demás universos, vio que en algunos tenían pequeños fallos por que Glitch había viajado en ellos y Galaxier two reparo esos universos y los personajes de esos universos no se dieron cuenta. Pero Galaxier Two sintió que algo estaba mal, vio este universo reflejado, ahora existía un universo nuevo “Eclipsus 1-A-2” donde, Glitch Falcon si pudo glitchear a Galaxier, ahora había dos Galaxier two, Galaxier two original y Galaxier two Glitch y ambos se vieron como en un espejo. Galaxier Two original restauro a calavera del universo Eclipsus 1-A y selló a Glitch para que no pudiese viajar en universos y contagiar a los demás. Mientras que en el universo Eclipsus 1-A-2, Galaxier Glitch absorbió el Glitch de calavera sanándolo, pero solo lo hizo para hacerse más poderoso, Glitch Falcon-2 quiso robar el Glitch de Galaxier Glitch, pero Galaxier Glitch era mas poderoso para robar su poder. Galaxier two sin querer había creado una nueva amenaza, y God Falcon ya no intervino en niguno de los dos universos.
+Al final God Falcon se encontró con God Falcon-2 y ambos se unieron, siendo ahora una fusión de 2 God falcones, y dos falcones normales en una sola entidad, y este evento no creo líneas paralelas. Y God Falcon estaba en el túnel, viendo a los universos en la pared, atrayendo universo hacia él y moviéndolos de lugar para elegir cual ver y proteger las líneas temporales de las amenazas y dejaron sus universos abandonados para vigilar el multiverso.
+</p>
+    </section>
+
+    <section class="personaje">
+      <h2>25. Glitch Galaxier (Eclipsus 1-A-2)</h2>
+      <p>Glitch Falcon-2 quiso robar el Glitch de Galaxier Glitch, pero Galaxier Glitch era mas poderoso para robar su poder.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>26. Calavera III | Serio</h2>
+      <p>Calavera III adopta un rol serio y cambia su actitud frente a los conflictos.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>27. Calavera III | Super Serio</h2>
+      <p>Calavera III alcanza su estado más serio, intensificando las tensiones.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>28. Skeleton hace que aborte Evelyn</h2>
+      <p>Skeleton interviene en el destino de Evelyn, impidiendo el nacimiento de Damián.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>29. Skeleton maltrata a Evelyn</h2>
+      <p>Se muestra un lado oscuro de Skeleton afectando a Evelyn directamente.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>30. Eclipsus 5 alternativo de Eclipsus one | Damian absorbido</h2>
+      <p>Damián es absorbido y el universo Eclipsus 5 se desarrolla en consecuencia.</p>
+    </section>
+
+    <section class="personaje">
+      <h2>31. Eclipsus 6 alternativo de Eclipsus one | Damián no absorbido</h2>
+      <p>Damián no es absorbido y los eventos se desarrollan de manera distinta a Eclipsus 5.</p>
     </section>
   </main>
 
